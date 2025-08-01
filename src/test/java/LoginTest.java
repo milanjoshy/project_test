@@ -28,7 +28,7 @@ public class LoginTest {
         driver.navigate().refresh();
 
         driver.findElement(By.id("username")).sendKeys("wrong");
-        driver.findElement(By.id("password")).sendKeys("wrongpass");
+        driver.findElement(By.id("password")).sendKeys("wrongs");
         driver.findElement(By.cssSelector("input[value='Login']")).click();
 
         Thread.sleep(1000);
