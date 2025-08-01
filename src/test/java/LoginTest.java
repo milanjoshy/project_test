@@ -9,7 +9,7 @@ public class LoginTest {
     public static void setup() {
         System.setProperty("webdriver.chrome.driver", "C:\\path\\to\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("file:///C:/path/to/login.html"); // Update path
+        driver.get("file:///D:/project_test/login.html"); // Update path
     }
 
     @Test
@@ -17,6 +17,7 @@ public class LoginTest {
         driver.findElement(By.id("username")).sendKeys("milan");
         driver.findElement(By.id("password")).sendKeys("test123");
         driver.findElement(By.cssSelector("input[value='Login']")).click();
+
 
         Thread.sleep(1000); // wait for JS
         String msg = driver.findElement(By.id("message")).getText();
@@ -28,7 +29,7 @@ public class LoginTest {
         driver.navigate().refresh();
 
         driver.findElement(By.id("username")).sendKeys("wrong");
-        driver.findElement(By.id("password")).sendKeys("wrongs");
+        driver.findElement(By.id("password")).sendKeys("wrngs");
         driver.findElement(By.cssSelector("input[value='Login']")).click();
 
         Thread.sleep(1000);
